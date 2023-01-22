@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.bank.accountservice.enums.AccountType;
 
@@ -25,5 +26,7 @@ public class BankAccount {
 	private String currency;
 	@Enumerated(EnumType.STRING)
 	private AccountType type;
+	@ManyToOne
+	private Customer customer;
 
 }
